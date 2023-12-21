@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500&display=swap");
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgb(25, 112, 255);
+  background: linear-gradient(
+    90deg,
+    rgb(75, 25, 255) 0%,
+    rgb(141, 121, 255) 100%
+  );
+}
+
+#head {
+  width: 100%;
+  height: 5%;
+}
+
+.standart_div {
+  background: #6340fd;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5%;
+  padding: 1%;
+  position: relative;
+  margin-inline: 1%;
+  animation: 0.5s downgo forwards;
+}
+
+.standart_div::before {
+  content: "";
+  position: absolute;
+  top: -2%;
+  bottom: -3%;
+  left: -3%;
+  right: -3%;
+  background: linear-gradient(
+    38deg,
+    rgb(113, 100, 255) 0%,
+    rgb(147, 203, 255) 100%
+  );
+  border-radius: 5%;
+  z-index: -1;
+}
+
+.fex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-block: 2%;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 7%;
+}
+
+.stp {
+  font-family: "Nunito Sans", sans-serif;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+#linerer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding-inline-start: 1%;
+}
+
+.liner {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 250%;
+}
+
+#inst {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline-end: 5%;
+  position: relative;
+  border-radius: 10px;
+  margin-block-end: 2%;
+  width: 40%;
+}
+
+/* #inst::before {
+  content: "";
+  position: absolute;
+  top: -3%;
+  bottom: -3%;
+  left: -1.5%;
+  right: -1.5%;
+  background: linear-gradient(
+    38deg,
+    rgb(113, 100, 255) 0%,
+    rgb(147, 203, 255) 100%
+  );
+  border-radius: 10px;
+  z-index: -1;
+} */
+
+h1 {
+  font-family: "Nunito Sans", sans-serif;
+  text-align: center;
+  color: #000;
+}
+
+@keyframes upgo {
+  0% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: 30px;
+  }
+}
+
+@keyframes downgo {
+  0% {
+    bottom: 30px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+.standart_div:hover {
+  animation: 0.5s upgo forwards;
+}
+
+@media (max-width: 1350px) {
+  #linerer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding-inline-start: 1%;
+  }
+}
+
+@media (max-width: 455px) {
+  .standart_div {
+    width: 70%;
+    display: flex;
+    align-items: center;
+  }
+}
